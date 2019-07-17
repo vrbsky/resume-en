@@ -1,0 +1,405 @@
+%-------------------------
+% Resume in Latex
+% Author : Ladislav Vrbsky
+% Template author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[main=english,czech]{babel}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[a4paper, top=1.6cm, bottom=1.2cm, left=1.2cm, right=1.2cm, includefoot, footskip = 10pt]{geometry}%, showframe
+\usepackage{color}
+
+%special characters, e.g. external link icons
+\usepackage{fontawesome}    %\faExternalLink, \faHandORight, \faGlobe
+\usepackage{marvosym}       %\Telefon, \Letter, \Mundus, \ComputerMouse
+\usepackage{pifont}         %\ding{43}   
+
+%================================================
+%--------- dotted underline -------------------
+% from https://tex.stackexchange.com/questions/27258/how-do-i-write-underline-text-but-with-a-dotted-line
+% more dotted styles at url above
+\usepackage{tikz}
+\newcommand{\udensdot}[1]{%
+    \tikz[baseline=(todotted.base)]{
+        \node[inner sep=0.5pt,outer sep=0.5pt] (todotted) {#1};
+        \draw[densely dotted] (todotted.south west) -- (todotted.south east);
+    }%
+}%
+%----------------------------------------------
+\urlstyle{same}
+%-----underline style of url---------
+% uncomment desired option
+%
+%--- underline with solid line ---
+%\let\oldhref\href
+%\renewcommand{\href}[2]{\oldhref{#1}{\hrefstyle{#2}}}
+%\newcommand{\hrefstyle}[1]{\underline{#1}}
+%\newcommand{\myHref}[2]{\href{#1}{#2}}
+%
+%--- underline with dotted line ---
+\newcommand{\myHref}[2]{\udensdot{\hspace{-1.2pt}\href{#1}{#2}\hspace{-4pt}}\hspace{-1.2pt}}
+%
+%--- no underline ---
+%\newcommand{\myHref}[2]{\href{#1}{#2}}
+%
+%------------------------------------
+%================================================
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.375in}
+%\addtolength{\evensidemargin}{-0.375in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\first}{1\textsuperscript{st}}
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeItemCustom}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheadingFourOriginal}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubheadingEduThree}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $\vert$ \textit{\small#3} & #2 \\
+    \end{tabular*}\vspace{-15pt}
+}
+\newcommand{\resumeSubheadingEduFive}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $\vert$ GPA #5 & #2 \\
+      \textit{\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-12pt}
+}
+\newcommand{\resumeSubheadingFour}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#2} & {\small #3} \\
+      \textbf{\small #1} & {\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeJobSubheadingA}[5]{
+  \vspace{-1pt}\item{
+    \begin{tabular*}{0.97\textwidth}{l}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#3} & {\small #4} \\
+    \end{tabular*}\\
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} {\small (#2)} & {\small #5} \\
+    \end{tabular*}\vspace{-12pt}
+    \end{tabular*}}
+}
+\newcommand{\resumeJobSubheadingB}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#3} & {\small #4} \\
+      {\small #1} {\small (#2)} & {[\small \texttt{#5}]} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeJobSubheadingC}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#3} & {\small #4}
+    \end{tabular*}\vspace{-5pt}
+    
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {\small #1} {\small (#2)} & {[\small \texttt{#5}]} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubheadingThree}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l @{\extracolsep{\fill}}r}
+      \textbf{#2} & {\small#3} \\
+      \textbf{#1} & \\ 
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\projectDescription}[1]{
+  \vspace{-6pt}
+  
+  \textit{\small#1}\\
+  \vspace{-5pt}
+}
+\newcommand{\projectDescriptionC}[1]{
+  \vspace{-12pt}
+  
+  \textit{\small#1}\\
+  \vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%for c# typeset
+\usepackage{scalerel}
+\newcommand{\csharpp}{C\scalerel*{\#}{X}}
+\newcommand{\csharp}{C\#}
+
+
+\newcommand{\version}{Document version: \ifcase \month \or Jan\or Feb\or Mar\or %
+Apr\or May\or Jun\or Jul\or Aug\or Sep\or Oct\or Nov\or %
+Dec\fi~\number\year} 
+
+\newcommand{\twoRowCell}[2]{\begin{tabular}[t]{@{}l@{}}#1\\#2\end{tabular}}
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\lfoot{xx}\cfoot{yy}\rfoot{zz}%ver.: March 2018}
+\definecolor{mygrayA}{gray}{0.3}
+\definecolor{mygrayB}{gray}{0.2}
+
+
+%---------- Define formatted text ----------
+\newcommand{\mytitle}{\textbf{{\huge \foreignlanguage{czech}{Ladislav Vrbsky}}}}
+\newcommand{\intro}{\twoRowCell{%
+%Passionate for Artificial Intelligence and Software Engineering. Seeking}{challenging projects, preferably in an English-speaking environment.
+Curious, honest, multi-cultural, ambitious, passionate for Machine Learning (ML), \\
+Artificial Intelligence (AI), Leading and Learning; MSc in Computer Science/AI; \\
+Strives to apply best practices in AI/ML/Data projects, develop team and company.
+}}
+\newcommand{\email}{%
+\myHref{mailto:ladislav.vrbsky@gmail.com}{ladislav.vrbsky@gmail.com}}
+\newcommand{\linkedin}{%
+\myHref{https://linkedin.com/in/vrbsky/}{linkedin.com/in/vrbsky}}
+\newcommand{\githubIO}{%
+\myHref{https://vrbsky.github.io/}{vrbsky.github.io}}
+\newcommand{\github}{%
+\myHref{https://github.com/vrbsky}{github.com/vrbsky}}
+\newcommand{\vrbskycom}{%
+\myHref{https://www.vrbsky.com}{www.vrbsky.com}}
+\newcommand{\addressBR}{%
+\myHref{https://www.google.com/maps?q=Belem,+PA,+Brazil}{Belem, PA, Brazil}}
+\newcommand{\phoneBR}{%
++55~(91)\,99388-7307}
+
+%---------- DOCUMENT ----------
+\begin{document}
+
+\vspace{-10pt}
+
+\fancyfoot[C]{\vspace{-2pt}\scriptsize{\version{} \textbar{} More info and a Portuguese version at \myHref{https://www.vrbsky.com}{vrbsky.com}}}%use footnotesize or scriptsize
+%\rfoot{\textcolor{mygray}{ver. March 2018}}
+
+%----------HEADING-----------------
+\begin{minipage}{0.66\linewidth}
+    {\centering
+        \mytitle{}\par
+    }
+    \vspace{6pt}
+    \intro{}
+\end{minipage}
+\begin{minipage}{0.333\linewidth}
+    {\flushright
+        \small{
+        \faPhone{} \faWhatsapp{} \phoneBR{} \\
+        \faEnvelope{} \email{} \\
+        \faLinkedin{} \linkedin{} \\
+        \faGithub{} \github{} \\
+        \faGlobe{} \vrbskycom{} \\
+        \faMapMarker{} \addressBR{} \\
+        }
+    }
+\end{minipage}
+
+%\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%    \mytitle{}  
+%                & \faLinkedin{} \linkedin{}~~~\faGithub{} \github{} \\
+%                & \faGlobe{} \vrbskycom{}~~~\faEnvelope{} \email{} \\% $\vert$ \linkedin{} \\
+%    \intro{}    & \faMapMarker{} \addressBR{}
+%\end{tabular*}
+%\mytitle{}\vspace{3pt}
+%\begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}c r}
+%    \email{} & \linkedin{} & \github{}
+%\end{tabular*}
+
+\vspace{-10pt}
+%\vspace{-14pt}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeJobSubheadingC
+      {\myHref{http://www.vibedesenv.com/}{Vibe Desenvolvimento}}{SW solutions comp.}%{Bel\'em, PA, Brazil}
+      {Data Scientist}{Jan 2019 -- Present}
+      {Python, SQL, Pandas, sklearn, Spark, Hive, Sqoop, Shell}
+     \projectDescriptionC{Data and Big Data tasks at a state bank \myHref{http://www.banpara.b.br/}{Banpará}, leveraging the Hadoop ecosystem and ML}
+      \resumeItemListStart
+        \resumeItemCustom{Proactively co-created and educated an in-house data science team}
+        \resumeItemCustom{Processed and analyzed data to drive important business decisions (Python, Pandas, Scikit-learn)}
+        \resumeItemCustom{Proactively delivered results to client leading to company recognition, increased billing and more projects}
+        \resumeItemCustom{Led transformation to being data-driven by evangelizing and educating stakeholders about Data and ML}
+        \resumeItemCustom{Created small PoC projects leveraging sklearn and Spark ML to help stakeholders widen their horizons}
+        \resumeItemCustom{Created ETL/ELT data pipelines}
+        \resumeItemCustom{Briefly administered and configured a Hadoop cluster (Cloudera)}
+        %\resumeItemCustom{Educated various teams on the topics of Data and Machine Learning}
+        \resumeItemCustom{Created Business Intelligence (BI) dashboards for business analysts}
+        \resumeItemCustom{Held meetings with stakeholders, presenting and discussing data projects}
+      \resumeItemListEnd
+      
+    \resumeJobSubheadingC
+      {\myHref{http://www.vibedesenv.com/}{Vibe Desenvolvimento}}{SW solutions comp.}%{Bel\'em, PA, Brazil}
+      {Software Developer - Web}{Oct 2017 -- Jan 2019}
+      {Java, C\#, SQL, CI/CD, JSF, JSP, AngularJS, JS, ASP.NET, SVN}
+      \projectDescriptionC{Internet banking web apps, management systems, RESTful web services for a state bank \myHref{http://www.banpara.b.br/}{Banpará}}
+      \resumeItemListStart
+          %{Internet Banking applications and other internal systems for a Brazilian state bank \myHref{http://www.banpara.b.br/}{Banpará}\\
+          %for a local state bank \myHref{http://www.banpara.b.br/}{Banpar\'a} --
+        %Internet Banking apps and internal management systems}
+        \resumeItemCustom{Developed, improved, maintained a variety of new and legacy systems (mostly back-end)}
+        \resumeItemCustom{Boosted 3x tech support speed by improving automation tool (for 1 frequent issue)}
+        \resumeItemCustom{Crushed high-impact bugs in production}
+        %\resumeItemCustom{Reduced from hours to minutes solutions of some team tasks by knowledge of various systems}
+        %\resumeItemCustom{Analyzed system errors, both in code and in databases}
+        %\resumeItemCustom{Used (RESTful) web services}
+        %\resumeItemCustom{Higher pressure}
+        %\resumeItemCustom{Building new web applications}
+        %\resumeItemCustom{Juggled multiple tasks at once}
+        %\resumeItemCustom{Worked in small teams, collaborated with technical requirements team}
+      \resumeItemListEnd
+
+%\newcommand{\vibeAA}{\resumeItemCustom{\textbf{=== Systems %in Production ===}}}
+%\newcommand{\vibeAB}{\resumeItemCustom{Maintaining existing %legacy systems}}
+%\newcommand{\vibeAC}{\resumeItemCustom{Tech support: Bug %fixes, analysis and related issues}}
+%\newcommand{\vibeAD}{\resumeItemCustom{Higher pressure}}
+%\newcommand{\vibeBA}{\resumeItemCustom{\textbf{=== New %Systems ===}}}
+%\newcommand{\vibeBB}{\resumeItemCustom{Building new web %applications}}
+%\newcommand{\vibeBC}{\resumeItemCustom{Close collaboration %with technical requirements team}}
+%    \begin{tabular*}{0.97\textwidth}{l l}
+%      \vibeAA & \vibeBA \\
+%      \vibeAB & \vibeBB \\
+%      \vibeAC & \vibeBC \\
+%      \vibeAD &  \\
+%    \end{tabular*}
+%      \resumeItemListEnd
+
+    \resumeJobSubheadingC
+      {\myHref{http://www.lpo.ufpa.br/}{Operational Research Lab}}{Electrical Engineering faculty lab}%{Bel\'em, PA, Brazil}
+      {Applied Artificial Intelligence Researcher \normalfont{(CAPES scholarship)}%
+      %\normalfont{, (part-time)}
+      }{Jan 2016 -- Apr 2018}
+      {Matlab, \LaTeX{}, Git}
+      \projectDescriptionC{Smart power grid communication optimization research through cell positioning - Related to MSc Thesis}
+      \resumeItemListStart
+        %\resumeItem{Research Assistant - Machine Learning}
+%\resumeItemCustom{Developed a model that calculates communication delay in network}
+\resumeItemCustom{Implemented a clustering-based topology optimizer for networks w.r.t. communication delay (%
+\myHref{https://github.com/vrbsky/network-model}{Open-Sourced})}
+\resumeItemCustom{Compared clustering algorithms and \textgreater{}50 k-means/model configs, % \first{} publication} deployment of Access Points and network Gateway
+resulting in \myHref{http://www.repositorio.ufpa.br/jspui/bitstream/2011/10013/1/Dissertacao_ClusteringDrivenEquipament.pdf}{MSc thesis}: \textit{Clustering-driven equipment deployment planner and analyzer for wireless non-mobile networks applied to Smart Grid scenarios}}
+%\resumeItemCustom{Open-sourced the model on \myHref{https://github.com/vrbsky/network-model}{GitHub} for utility companies and further research}
+      \resumeItemListEnd
+
+    \resumeJobSubheadingC
+      {\myHref{https://www.agentfly.com}{AgentFly Technologies}}{Commercial/university startup at
+      \myHref{http://agents.felk.cvut.cz/projects/agentfly}{Agent Technology Center}}%{Prague, Czech Republic}
+      {Junior Software Developer}{Apr 2013 -- Aug 2014}
+      {Java, XML, CVS}
+      \projectDescriptionC{Large-scale multi-agent project, that models and simulates air traffic control}
+      \resumeItemListStart
+        \resumeItemCustom{Implemented event-oriented collision avoidance protocol for UAVs, a.k.a~drones}
+        \resumeItemCustom{Optimized heuristic of route generation by extrapolating the collision-based utility values}
+        \resumeItemCustom{Analyzed 4 heuristics of route generation w.r.t. computational and communication costs, and 4 other metrics}
+        %\resumeItemCustom{Developed communication skills by interacting and working directly with the CEO}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-15.5pt}
+
+%-----------PROJECTS-----------------
+\section{Projects \& Publications}
+  \resumeSubHeadingListStart
+    \resumeSubItem{%
+        \textbf{%
+            \myHref{http://icnsc2017.dimes.unical.it/}{ICNSC 2017} (Intl. Conference):
+        {\myHref{https://ieeexplore.ieee.org/document/8000059/}{Clustering techniques for data network planning in Smart Grids}}}}
+        {\\\hspace{24pt}Determines deployment positions of Base Stations in a network. Compares clustering algorithms.}
+    \resumeSubItem{Fraud detection in energy network}%
+        {Neural Networks, Decision Trees, Fuzzy Logic, Genetic Algorithm}
+    \resumeSubItem{Memetic algorithm for Traveling Salesman Problem}{Genetic Algorithm with local search}
+    \resumeSubItem{Other ML}
+        {Transfer learning (TensorFlow), Simple app using TensorFlow.js, Color quantization (Matlab)}
+  \resumeSubHeadingListEnd
+
+%--------COMPUTER SCIENCE SKILLS------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}{Python 2 yrs, SQL 2 yrs, Java 4 yrs, C\# 1 yr, C/C\texttt{++} 1 yr, Matlab 3 yrs, JS $\vert$ \textbf{Eng}, \textbf{Por}, \textbf{Cze}, Ger}
+      %\hfill
+      %\textbf{}{}
+    \resumeSubItem{Competencies}{(Un-)Supervised ML, Probability, Statistics, Hadoop ecosystem, Presentation \& Public speaking} %AWS, Play, React, Kafka, GCE
+    \resumeSubItem{Interests}{Spark, Kafka, TensorFlow 2, PyTorch, Cloud comp., Reinforcement Learning, Neural Nets $\vert$ Leadership}
+    
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingEduFive{%
+    \myHref{http://www.ppgee.ufpa.br/index.php/en/}{Federal University of Par\'a (UFPA)}}{Belem, PA, BRA}
+      {MSc -- Applied Computing: Artificial Intelligence}
+        {}
+        %{Aug 2015 -- Mar 2018}
+        {3.889}
+    \resumeSubheadingEduThree{%
+    \myHref{https://www.cs.ksu.edu/index.html}{Kansas State University (KSU)}}{Manhattan, KS, USA}
+      {MSc period -- Computer Science (intl. exchange)}
+        %{Aug 2014 -- May 2015}
+        %{3.692~(undergrad.~\&~grad.~combined)}%
+        %87/23=3.783~(undergrad.)
+        %9/3=3.000~(grad.)
+        %(87+9)/(23+3)=3.692 (combined)
+    \resumeSubheadingEduThree{%
+    \myHref{https://oi.fel.cvut.cz/en/bachelor-specialization-computer-and-informatic-science}{Czech Technical University (CTU)}}{Prague, CZE}
+      {BSc -- Computer and Information Science}
+        %{Jun 2014}
+        %{Aug 2011 -- June 2014}
+        %{3.007}
+  \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
