@@ -102,13 +102,13 @@
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} $\vert$ \textit{\small#3} & #2 \\
-    \end{tabular*}\vspace{-15pt}
+    \end{tabular*}\vspace{-16pt}
 }
 \newcommand{\resumeSubheadingEduFive}[5]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} $\vert$ GPA #5 & #2 \\
-      \textit{\small#3} & {\small #4} \\
+      \textbf{#1} $\vert$ \textit{\small#3} & #2 \\
+      GPA #5 & {\small #4} \\
     \end{tabular*}\vspace{-12pt}
 }
 \newcommand{\resumeSubheadingFour}[4]{
@@ -179,7 +179,9 @@
 \usepackage{scalerel}
 \newcommand{\csharpp}{C\scalerel*{\#}{X}}
 \newcommand{\csharp}{C\#}
+\newcommand{\cplusplus}{C\texttt{++}}
 
+\newcommand{\myFaKaggle}{{\fontfamily{lmss}\selectfont \textbf{k}}}%fonts: pag, phv, lmss, qag, qhv
 
 \newcommand{\version}{Document version: \ifcase \month \or Jan\or Feb\or Mar\or %
 Apr\or May\or Jun\or Jul\or Aug\or Sep\or Oct\or Nov\or %
@@ -212,6 +214,8 @@ Strives to apply best practices in AI/ML/Data projects, develop team and company
 \myHref{https://vrbsky.github.io/}{vrbsky.github.io}}
 \newcommand{\github}{%
 \myHref{https://github.com/vrbsky}{github.com/vrbsky}}
+\newcommand{\kaggle}{%
+\myHref{https://www.kaggle.com/vrbsky}{kaggle.com/vrbsky}}
 \newcommand{\vrbskycom}{%
 \myHref{https://www.vrbsky.com}{www.vrbsky.com}}
 \newcommand{\addressBR}{%
@@ -224,7 +228,7 @@ Strives to apply best practices in AI/ML/Data projects, develop team and company
 
 \vspace{-10pt}
 
-\fancyfoot[C]{\vspace{-2pt}\scriptsize{\version{} \textbar{} More info and a Portuguese version at \myHref{https://www.vrbsky.com}{vrbsky.com}}}%use footnotesize or scriptsize
+\fancyfoot[C]{\vspace{-2pt}\scriptsize{\version{} \textbar{} More info \& versão em portugues: \myHref{https://www.vrbsky.com}{vrbsky.com}}}%use footnotesize or scriptsize
 %\rfoot{\textcolor{mygray}{ver. March 2018}}
 
 %----------HEADING-----------------
@@ -241,6 +245,7 @@ Strives to apply best practices in AI/ML/Data projects, develop team and company
         \faPhone{} \faWhatsapp{} \phoneBR{} \\
         \faEnvelope{} \email{} \\
         \faLinkedin{} \linkedin{} \\
+        %\myFaKaggle{} \kaggle{} \\
         \faGithub{} \github{} \\
         \faGlobe{} \vrbskycom{} \\
         \faMapMarker{} \addressBR{} \\
@@ -269,7 +274,7 @@ Strives to apply best practices in AI/ML/Data projects, develop team and company
       {\myHref{http://www.vibedesenv.com/}{Vibe}}{Technology for businesses}%{Bel\'em, PA, Brazil}
       {Data Scientist}{Jan 2019 -- Present}
       {Python, SQL, Pandas, sklearn, Spark, Azure, Hive, Sqoop, Shell}
-     \projectDescriptionC{Data and Big Data tasks at a state bank \myHref{http://www.banpara.b.br/}{Banpará}, among other clients, leveraging the Hadoop, cloud and ML}
+     \projectDescriptionC{Data and Big Data tasks at a state bank \myHref{http://www.banpara.b.br/}{Banpara}, among other clients, leveraging the Hadoop, cloud and ML}
       \resumeItemListStart
         \resumeItemCustom{Proactively co-created and educated an in-house data science team}
         \resumeItemCustom{Processed and analyzed data to drive important business decisions, avoiding a significant unnecessary expense}
@@ -288,8 +293,8 @@ Strives to apply best practices in AI/ML/Data projects, develop team and company
     \resumeJobSubheadingC
       {\myHref{http://www.vibedesenv.com/}{Vibe}}{Technology for businesses}%{Bel\'em, PA, Brazil}
       {Software Developer - Web}{Oct 2017 -- Jan 2019}
-      {Java, C\#, SQL, CI/CD, REST, JSF, JSP, AngularJS, JS, ASP.NET, SVN}
-      \projectDescriptionC{Internet banking web apps, management systems, web services for a state bank \myHref{http://www.banpara.b.br/}{Banpará}}
+      {Java, \csharp, SQL, REST, JS, ASP.NET, SVN}%CI/CD, JSF, JSP, AngularJS,
+      \projectDescriptionC{Internet banking web apps, management systems, web services for a state bank \myHref{http://www.banpara.b.br/}{Banpara}}
       \resumeItemListStart
           %{Internet Banking applications and other internal systems for a Brazilian state bank \myHref{http://www.banpara.b.br/}{Banpará}\\
           %for a local state bank \myHref{http://www.banpara.b.br/}{Banpar\'a} --
@@ -339,11 +344,13 @@ resulting in \myHref{http://www.repositorio.ufpa.br/jspui/bitstream/2011/10013/1
       \resumeItemListEnd
 
     \resumeJobSubheadingC
-      {\myHref{https://www.agentfly.com}{AgentFly Technologies}}{Commercial/university startup at
-      \myHref{http://agents.felk.cvut.cz/projects/agentfly}{Agent Technology Center}}%{Prague, Czech Republic}
+      {\myHref{https://www.agentfly.com}{AgentFly Technologies}}{Startup born at the
+      \myHref{http://aic.fel.cvut.cz/}{AI Center}}%{Prague, Czech Republic}
+      %formerly Agent Technology Center at http://agents.felk.cvut.cz/projects/agentfly
       {Junior Software Developer}{Apr 2013 -- Aug 2014}
-      {Java, XML, CVS}
-      \projectDescriptionC{Large-scale multi-agent project, that models and simulates air traffic control}
+      {Java, CVS}
+      \projectDescriptionC{Air traffic management simulation for what-if analysis and future concepts}
+      %Large-scale multi-agent project, that models and simulates air traffic control}
       \resumeItemListStart
         \resumeItemCustom{Implemented event-oriented collision avoidance protocol for UAVs, a.k.a~drones}
         \resumeItemCustom{Optimized heuristic of route generation by extrapolating the collision-based utility values}
@@ -371,23 +378,23 @@ resulting in \myHref{http://www.repositorio.ufpa.br/jspui/bitstream/2011/10013/1
 %--------COMPUTER SCIENCE SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Languages}{Python 2 yrs, SQL 2 yrs, Java 4 yrs, C\# 1 yr, C/C\texttt{++} 1 yr, Matlab 3 yrs, JS $\vert$ \textbf{Eng}, \textbf{Por}, \textbf{Cze}, Ger}
+    \resumeSubItem{Languages}{Python 3 yrs, SQL 2 yrs, Java 4 yrs, \csharp 1 yr, C/\cplusplus{} 1 yr, Matlab 3 yrs, JS $\vert$ \textbf{Eng}, \textbf{Por}, \textbf{Cze}, Ger}
       %\hfill
       %\textbf{}{}
-    \resumeSubItem{Competencies}{(Un-)Supervised ML, Probability, Statistics, Hadoop ecosystem, Presentation \& Public speaking} %AWS, Play, React, Kafka, GCE
-    \resumeSubItem{Interests}{Spark, Kafka, TensorFlow 2, PyTorch, Cloud comp., Reinforcement Learning, Neural Nets $\vert$ Leadership}
+    \resumeSubItem{Competencies}{(Un-)Supervised ML, Statistics, Presentation \& Public speaking, BI Dashboards} %AWS, Play, React, Kafka, GCE, Hadoop ecosystem
+    \resumeSubItem{Interests}{Spark, Kafka, TensorFlow 2, PyTorch, Cloud, Reinforcement Learning, Neural Nets $\vert$ Leadership}
     
   \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheadingEduFive{%
+    \resumeSubheadingEduThree{%
     \myHref{http://www.ppgee.ufpa.br/index.php/en/}{Federal University of Par\'a (UFPA)}}{Belem, PA, BRA}
       {MSc -- Applied Computing: Artificial Intelligence}
-        {}
+        %{}
         %{Aug 2015 -- Mar 2018}
-        {3.889}
+        %{3.889}%use GPA for about 2 to 3 years (max 5) after graduating or of work experience
     \resumeSubheadingEduThree{%
     \myHref{https://www.cs.ksu.edu/index.html}{Kansas State University (KSU)}}{Manhattan, KS, USA}
       {MSc period -- Computer Science (intl. exchange)}
@@ -398,7 +405,7 @@ resulting in \myHref{http://www.repositorio.ufpa.br/jspui/bitstream/2011/10013/1
         %(87+9)/(23+3)=3.692 (combined)
     \resumeSubheadingEduThree{%
     \myHref{https://oi.fel.cvut.cz/en/bachelor-specialization-computer-and-informatic-science}{Czech Technical University (CTU)}}{Prague, CZE}
-      {BSc -- Computer and Information Science}
+      {BSc -- Computer and Informatic Science}
         %{Jun 2014}
         %{Aug 2011 -- June 2014}
         %{3.007}
