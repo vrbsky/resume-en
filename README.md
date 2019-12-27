@@ -10,7 +10,7 @@ I created this as managing a resume on Google Docs was hard and changing any for
 
 ### License
 
-License is MIT by Sourabh Bajaj.
+MIT license by Sourabh Bajaj.
 
 
 ### Preview
