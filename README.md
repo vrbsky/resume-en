@@ -9,7 +9,7 @@ I created this as managing a resume on Google Docs was hard and changing any for
 
 
 ### Portuguese version
-Portuguese version is accessible in my other repo at github.com/vrbsky/resume-pt
+Portuguese version is accessible in my other repo at [github.com/vrbsky/resume-pt](https://github.com/vrbsky/resume-pt)
 
 
 ### License
