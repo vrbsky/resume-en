@@ -160,6 +160,12 @@
       \textbf{#4} at \myHrefIcn{#1}{#2} \hspace{3pt} [\small \texttt{#6}] & {\small #5}
     \end{tabular*}\vspace{-6pt}
 }
+\newcommand{\resumeJobSubheadingDx}[7]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#4} \myHrefIcn{#1}{#2} \hspace{3pt} [\small \texttt{#6}] & {\small #5}
+    \end{tabular*}\vspace{-6pt}
+}
 \newcommand{\resumeSubheadingThree}[3]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l @{\extracolsep{\fill}}r}
@@ -216,10 +222,10 @@ Dec\fi~\number\year}
 \newcommand{\mytitle}{\textbf{{\huge \foreignlanguage{czech}{Ladislav Vrbsky}}}}
 \newcommand{\intro}{%\twoRowCell{%
 %Passionate for Artificial Intelligence and Software Engineering. Seeking}{challenging projects, preferably in an English-speaking environment.
-MSc in AI, all out for Artificial Intelligence (AI) and Data. Executes Machine Learning (ML) projects from analyses and prototypes to production and is develops a data platform, all on cloud, leveraging Python and SQL.
+Data team lead, delivering data \& AI projects on cloud (mostly AWS), leveraging Python, SQL and DevOps approaches. Engaged in the whole project life-cycle, including its management. Trains the data team,
 %Typically analyzes data, prototypes and productionizes Machine Learning (ML) models and is developing a data platform, all on cloud, leveraging Python and SQL.
-Interacts with stakeholders and developers and trains others. % as the authority for the above.
-Is curious, multi-cultural and passionate for AI/ML, Data, Cloud and Leadership.
+% Interacts with stakeholders and developers and trains others. % as the authority for the above.
+has a growth mindset, is multi-cultural and passionate for AI/ML, Data, Cloud, Leadership and his daughter.
 %ambitious
 %Holds an MSc in AI.
 }%}
@@ -236,9 +242,9 @@ Is curious, multi-cultural and passionate for AI/ML, Data, Cloud and Leadership.
 \newcommand{\kaggle}{%
 \href{https://www.kaggle.com/vrbsky}{\myFaKaggle{}} kaggle.com/vrbsky}
 \newcommand{\vrbskycom}{%
-\href{https://www.vrbsky.com}{\faGlobe{}} www.vrbsky.com}
+\href{https://www.vrbsky.github.com}{\faGlobe{}} www.vrbsky.github.com}
 \newcommand{\addressBR}{%
-\hspace{1pt}\href{https://www.google.com/maps?q=Belem,+PA,+Brazil}{\faMapMarker{}}\hspace{1pt} Remote (GMT-3), Brazil}
+\hspace{1pt}\href{https://www.google.com/maps?q=Belem,+PA,+Brazil}{\faMapMarker{}}\hspace{1pt} Remote (UTC-3), Brazil}
 \newcommand{\phoneBR}{%
 \href{https://api.whatsapp.com/send?phone=5591993887307}{\faWhatsapp{}} +55~(91)\,99388-7307}%\faPhone{}
 
@@ -253,7 +259,7 @@ Is curious, multi-cultural and passionate for AI/ML, Data, Cloud and Leadership.
 %\newcommand{\kaggle}{%
 %\myHref{https://www.kaggle.com/vrbsky}{kaggle.com/vrbsky}}
 %\newcommand{\vrbskycom}{%
-%\myHref{https://www.vrbsky.com}{www.vrbsky.com}}
+%\myHref{https://www.vrbsky.github.com}{www.vrbsky.github.com}}
 %\newcommand{\addressBR}{%
 %\myHref{https://www.google.com/maps?q=Belem,+PA,+Brazil}{Belem, PA, Brazil}}
 %\newcommand{\phoneBR}{%
@@ -264,7 +270,7 @@ Is curious, multi-cultural and passionate for AI/ML, Data, Cloud and Leadership.
 
 \vspace{-10pt}
 
-\fancyfoot[C]{\vspace{-1pt}\scriptsize{\version{} \textbar{} More info \& versão em português: vrbsky.com \tiny{\href{https://www.vrbsky.com}{\faExternalLink{}}}}}%use footnotesize or scriptsize
+\fancyfoot[C]{\vspace{-1pt}\scriptsize{\version{} \textbar{} More info \& versão em português: vrbsky.github.com \tiny{\href{https://www.vrbsky.github.com}{\faExternalLink{}}}}}%use footnotesize or scriptsize
 %\rfoot{\textcolor{mygray}{ver. March 2018}}
 
 %----------HEADING-----------------
@@ -309,31 +315,33 @@ Is curious, multi-cultural and passionate for AI/ML, Data, Cloud and Leadership.
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeJobSubheadingD
-      {http://www.vibetecnologia.com/}{Vibe}{Technology for businesses}%{Bel\'em, PA, Brazil}
-      {Data Scientist}{Jan 2019 -- Present $\vert$ BRA}
-      {AWS, Azure, Python, SQL}%Power BI, sklearn, Pandas, Qlik, serverless, data lake
-     {Data and Big Data tasks at a bank \myHrefIcn{http://www.banpara.b.br/}{Banpara}, among other clients, leveraging the Hadoop, cloud and ML}
+      {http://www.vibetecnologia.com/}{Vibe Group}{Technology for businesses}%{Bel\'em, PA, Brazil}
+      {Data Scientist \& Engineer}{Jan 2019 -- Present $\vert$ Remote}
+      {AWS, Python, SQL, DevOps}%Power BI, sklearn, Pandas, Qlik, serverless, data lake
+     {Data team lead and responsible.
+Architecting and developing B2B data solutions on AWS cloud}
       \resumeItemListStart
-        \resumeItemCustom{Developed and was responsible for a supervised ML project with a data architecture and MLOps, using AWS, from prototypes to production}
-        \resumeItemCustom{Proactively co-created and structured an in-house Data Analytics team, its offering and content}%and educated
+        \resumeItemCustom{Enabled data analytics by creating Data Lakes and Data Warehouses on AWS}
+        \resumeItemCustom{Reduced deep learning (AI) training times from weeks to days}
+        \resumeItemCustom{Proactively co-created, structured and lead a Data team}%and educated
         %\resumeItemCustom{Held numerous meetings with stakeholders, delivering, discussing and pitching data projects}
         \resumeItemCustom{Promoted company's data-driven culture by sharing knowledge, besides teaching English}
         %\resumeItemCustom{Delivered results to client leading to company recognition, increased billing and more projects}
         %\resumeItemCustom{Led transformation to being data-driven by evangelizing and educating stakeholders about Data and ML}
-        \resumeItemCustom{Controlled COVID-19 by collecting API data using Azure Functions and visualizing them with Power BI}
-        \resumeItemCustom{Delivered data PoCs leveraging the AWS and Azure clouds}%and to educate stakeholders
+        % \resumeItemCustom{Controlled COVID-19 by collecting API data using Azure Functions and visualizing them with Power BI}
+        % \resumeItemCustom{Delivered data PoCs leveraging the AWS and Azure clouds}%and to educate stakeholders
         %to help stakeholders widen their horizons
         %\resumeItemCustom{Created ETL/ELT data pipelines}
         %\resumeItemCustom{Briefly administered and configured a Hadoop cluster (Cloudera)}
         %\resumeItemCustom{Educated various teams on the topics of Data and Machine Learning}
-        \resumeItemCustom{Improved company's management by delivering Business Intelligence (BI) reports in Power BI}
+        \resumeItemCustom{Improved management by delivering Business Intelligence (BI) reports and dashboards}
         %\resumeItemCustom{Built Power BI reports for COVID-19 control and client companies}%Maqterra, EverFlow, Covid, Revemar, SEGUP Monitor
-        \resumeItemCustom{Avoided client's significant expenses and drove important business decisions by analyzing customer data}%unnecessary expense
+        \resumeItemCustom{Avoided client's significant expenses and drove important business decisions by an ad-hoc data analysis}%unnecessary expense
       \resumeItemListEnd
     
-    \resumeJobSubheadingD
-      {http://orbita.srv.br/}{Órbita}{}%{Bel\'em, PA, Brazil}
-      {Cloud Data Engineer \& Architect}{Apr 2020 -- Present $\vert$ BRA}
+    \resumeJobSubheadingDx
+      {http://orbita.srv.br/}{(contracts)}{}%{Bel\'em, PA, Brazil}
+      {Data Engineer \& Architect}{Apr 2020 -- Feb 2022 $\vert$ Remote}
       {GCP, Python, SQL}%Data Studio, serverless, data lake
       {Data platform creation, automated data integration}
       \resumeItemListStart
@@ -418,7 +426,7 @@ $\rightarrow$ \myHrefIcn{http://www.repositorio.ufpa.br/jspui/bitstream/2011/100
 \vspace{-10pt}
 
 %-----------PROJECTS-----------------
-\section{Projects \& Publications}
+\section{Other Projects \& Publications}
   \resumeSubHeadingListStart
     \resumeSubItem{%
         \textbf{%
@@ -432,14 +440,18 @@ $\rightarrow$ \myHrefIcn{http://www.repositorio.ufpa.br/jspui/bitstream/2011/100
         {Transfer learning (TensorFlow), Simple client-side ML (TensorFlow.js), Color quantization (Matlab)}
   \resumeSubHeadingListEnd
 
+\vspace{-4pt}
+
 %--------COMPUTER SCIENCE SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Languages, Libs, Tools}{Python, SQL, sklearn, pandas, git, Java, \csharp, Matlab $\vert$ Eng, Por, Cze, (Ger)}
-    \resumeSubItem{Competencies}{ML, Statistics, Cloud data tools \& archit. (AWS, GCP, Azure), Public speaking, Teaching, BI dev}%AWS, Play, React, Kafka, GCE, Hadoop ecosystem
-    \resumeSubItem{Interests}{Leadership, TensorFlow, PyTorch, Spark, Kafka, Reinforcement Learning}
+    \resumeSubItem{Languages, Libs, Tools}{Python, SQL, shell, sklearn, pandas, git, Java, \csharp, Matlab $\vert$ Eng, Por, Cze, (Ger)}
+    \resumeSubItem{Competencies}{AWS, AI/ML, Data eng., data solution architecture, communication, leadership (in progress)}%AWS, Play, React, Kafka, GCE, Hadoop ecosystem
+    % \resumeSubItem{In progress}{Leadership}
     
   \resumeSubHeadingListEnd
+
+\vspace{-4pt}
 
 %-----------EDUCATION-----------------
 \section{Education}
